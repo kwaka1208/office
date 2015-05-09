@@ -18,8 +18,8 @@ Sub ReplaceWordsForSheet(ByRef sheet As Worksheet)
 '
 	Open "C:\tmp\list.csv" For Input As #1
 	While Not EOF(1)
-		Line Input #1, WordPare
-		s = Split(WordPare, ",")
+		Line Input #1, WordPair
+		s = Split(WordPair, ",")
 		' 取り出した文字列がペアでなかったら、その行は無視します。
 		If (UBound(s) < 2) Then GoTo Continue
 
